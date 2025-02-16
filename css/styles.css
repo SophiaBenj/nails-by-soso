@@ -1,0 +1,233 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffcccb;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo */
+.navbar-brand.logo {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-link {
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.nav-link:hover {
+    color: #ff6f61;
+}
+
+/* Main */
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+/* "Where Beauty Meets Precision" */
+.main-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-style: italic;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+.services-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-style: italic;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.services-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.service-category {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.service-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #ff6f61;
+    margin-bottom: 15px;
+}
+
+.service-category p {
+    color: #555;
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+/* Button */
+.btn-primary {
+    background-color: #ff6f61;
+    border-color: #ff6f61;
+    font-size: 1.8rem;
+    padding: 10px 30px;
+    margin-top: 20px;
+}
+
+.btn-primary:hover {
+    background-color: #e65a50;
+    border-color: #e65a50;
+}
+
+/* Clickable Services */
+.service-link {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin: 10px 0;
+    padding: 8px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.service-link:hover {
+    background-color: #f8f9fa;
+    color: #ff6f61;
+}
+
+.image-container img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* "Book Your Appointment" */
+.booking-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-style: italic;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* Centrer le formulaire */
+.container form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    position: relative;
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Form Inputs */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+/* Message Box */
+#message {
+    resize: none;
+}
+
+/* Client Information */
+.client-info-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-style: italic;
+    color: #333;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Form Group */
+.form-group {
+    position: relative;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.form-group label {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.home-button {
+    background-color: #ff6f61;
+    color: white;
+    padding: 15px 40px;
+    font-size: 2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: #e65a50;
+}

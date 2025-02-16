@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NAILS BY SOSO - Client Info</title>
+  <link href="css/styles.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .booking-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.7em;
+      font-style: italic;
+      font-weight: 400;
+      color: #333;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    label {
+      font-size: 1.2rem;
+      text-align: left;
+      display: block;
+      margin-bottom: 5px;
+    }
+    .form-control {
+      font-size: 1.4rem;
+      padding: 10px;
+      height: 50px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .mb-3 {
+      margin-bottom: 20px !important;
+    }
+    .btn-primary {
+      font-size: 1.8rem;
+      padding: 10px 30px;
+      display: block;
+      margin: 40px auto 0;
+      color: #fff;
+      border-radius: 10px;
+      background-color: #ff6f61;
+      border: none;
+    }
+    .btn-primary:hover {
+      background-color: #e65a50;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="booking-title">ENTER YOUR INFORMATION</h1>
+    <form id="clientInfoForm">
+      <input type="hidden" id="service">
+      <input type="hidden" id="date">
+      <input type="hidden" id="time">
+      <input type="hidden" id="message">
+      
+      <div class="mb-3">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label for="phoneNumber">Phone Number</label>
+        <input type="tel" id="phoneNumber" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label for="email">Email</label>
+        <input type="email" id="email" class="form-control">
+      </div>
+      <button type="submit" class="btn btn-primary">Confirm Booking</button>
+    </form>
+  </div>
+
+  <script>
+    function getParameterByName(name) {
+      return new URLSearchParams(window.location.search).get(name);
+    }
+
+    document.getElementById("service").value = getParameterByName("service");
+    document.getElementById("date").value = getParameterByName("date");
+    document.getElementById("time").value = getParameterByName("time");
+    document.getElementById("message").value = getParameterByName("message");
+
+    document.getElementById("clientInfoForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const firstName = document.getElementById("firstName").value;
+      const lastName = document.getElementById("lastName").value;
+      const phoneNumber = document.getElementById("phoneNumber").value;
+      const email = document.getElementById("email").value;
+      window.location.href = `confirmation.html?service=${getParameterByName("service")}&date=${getParameterByName("date")}&time=${getParameterByName("time")}&message=${getParameterByName("message")}&firstName=${encodeURIComponent(firstName)}&lastName=${encodeURIComponent(lastName)}&phoneNumber=${encodeURIComponent(phoneNumber)}&email=${encodeURIComponent(email)}`;
+    });
+  </script>
+</body>
+</html>

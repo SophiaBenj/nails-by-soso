@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAILS BY SOSO - Booking Confirmation</title>
+    <link href="css/styles.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            padding: 50px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .confirmation-card {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            width: auto;
+            margin: 0 auto;
+        }
+
+        .confirmation-title {
+            font-size: 3.2em;
+            font-weight: 600;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .confirmation-details,
+        .client-details {
+            margin-bottom: 20px;
+        }
+
+        .confirmation-details h2,
+        .client-details h2 {
+            font-size: 1.6em;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .confirmation-details p,
+        .client-details p {
+            font-size: 1.2em;
+            line-height: 1.4;
+            margin: 5px 0;
+        }
+
+        .confirmation-text {
+            font-size: 1.3em;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .btn-primary {
+            font-size: 1.4em;
+            padding: 10px 25px;
+            background-color: #ff6f61;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            text-align: center;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .btn-primary:hover {
+            background-color: #e65a50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="confirmation-card">
+            <h1 class="confirmation-title">Appointment Confirmed! 🎉</h1>
+            <p>Thank you <span id="clientName"></span> for booking with NAILS BY SOSO!</p>
+            
+            <div class="confirmation-details">
+                <h2>Booking Details</h2>
+                <p><strong>Service:</strong> <span id="service"></span></p>
+                <p><strong>Date:</strong> <span id="date"></span></p>
+                <p><strong>Time:</strong> <span id="time"></span></p>
+                <p><strong>Additional Notes:</strong> <span id="message"></span></p>
+            </div>
+
+            <div class="client-details">
+                <h2>Client Information</h2>
+                <p><strong>Name:</strong> <span id="fullName"></span></p>
+                <p><strong>Phone:</strong> <span id="phoneNumber"></span></p>
+                <p><strong>Email:</strong> <span id="email"></span></p>
+            </div>
+
+            <p class="confirmation-text">We look forward to seeing you! 😊</p>
+
+            <div class="button-container">
+                <a href="index.html" class="btn-primary home-button">Home</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function getParameterByName(name) {
+            return new URLSearchParams(window.location.search).get(name);
+        }
+
+        document.getElementById("clientName").textContent = getParameterByName("firstName");
+        document.getElementById("fullName").textContent = getParameterByName("firstName") + " " + getParameterByName("lastName");
+        document.getElementById("service").textContent = getParameterByName("service");
+        document.getElementById("date").textContent = getParameterByName("date");
+        document.getElementById("time").textContent = getParameterByName("time");
+        document.getElementById("message").textContent = getParameterByName("message") || "No additional notes.";
+        document.getElementById("phoneNumber").textContent = getParameterByName("phoneNumber");
+        document.getElementById("email").textContent = getParameterByName("email");
+    </script>
+</body>
+</html>
